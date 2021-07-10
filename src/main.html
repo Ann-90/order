@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles.css" />
+		<link rel="stylesheet" href="./main.css" />
+
+		<script src="/scripts.js" defer></script>
+		<script src="./main.js" defer></script>
+
+		<title>annvoro test</title>
+	</head>
+	<body>
+		<div class="container">
+			<article class="card">
+				<img class="card__decore" src="/public/background-elem.svg" alt="" />
+
+				<div class="card__area order">
+					<form class="order__form form" action="./payment.html" target="_self" id="order__form">
+						<section class="form__input">
+							<h3>Info</h3>
+							<span>Enter your email address</span>
+							<input type="email" placeholder="team@checkforpatent.com" />
+						</section>
+
+						<div class="form__products">
+							<!-- HTML element in main.js -->
+						</div>
+
+						<section class="form__add-btn add-btn">
+							<a class="add-btn__ref" href="./add.html">
+								<h3>Add more products</h3>
+								<img src="/public/add.svg" alt="" />
+							</a>
+
+							<span>We offer discount up to 36% for multiple checks</span>
+						</section>
+					</form>
+
+					<button class="order__formbtn formbtn" form="order__form" type="submit"></button>
+
+					<div class="order__secure">
+						<img src="/public/secure.svg" alt="" />
+						<small>Secure payment with Stripe</small>
+					</div>
+				</div>
+			</article>
+		</div>
+	</body>
+</html>

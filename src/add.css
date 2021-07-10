@@ -1,0 +1,61 @@
+.add__info {
+	margin: 12px 0;
+}
+
+.form {
+	border: 1.5px solid #e1e3ee;
+	border-radius: 15px;
+}
+
+.form__input {
+	display: flex;
+	align-items: center;
+	padding: 11px 17px;
+	border: none;
+}
+
+.form__input:not(:last-of-type) {
+	border-bottom: 1.5px solid #e1e3ee;
+}
+
+.form__input_active {
+	background-color: #f4f5fa;
+}
+
+.form__input_active small {
+	color: #23c967;
+}
+
+input {
+	margin: 0 12px 0 0;
+}
+/* TO DO: checked by JS */
+input :checked {
+	background-color: #f4f5fa;
+	color: #23c967;
+}
+b {
+	color: #000000;
+	display: block;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0 0 5px 0;
+}
+small {
+	color: #a7a2cb;
+	font-size: 13px;
+	line-height: 15px;
+}
+
+@media screen and (max-width: 719px) {
+	body,
+	b {
+		font-size: 10px;
+		line-height: 12px;
+	}
+
+	small {
+		font-size: 8px;
+		line-height: 10px;
+	}
+}

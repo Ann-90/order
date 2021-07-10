@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/styles.css" />
+		<link rel="stylesheet" href="./add.css" />
+
+		<script src="/scripts.js" defer></script>
+		<script src="./add.js" defer></script>
+
+		<title>annvoro test</title>
+	</head>
+	<body>
+		<div class="container">
+			<article class="card">
+				<img class="card__decore" src="/public/background-elem.svg" alt="" />
+				<div class="card__area add">
+					<h3>Adding more products</h3>
+					<p class="add__info">The more items you check, the better the price.</p>
+
+					<form class="add__form form" id="add__form" name="products" action="./main.html">
+						<section class="form__input form__input_active">
+							<input type="radio" id="5_products" name="products" checked />
+							<div class="form__add-desccription">
+								<b>5 products for 80 usd / 16$ for each</b>
+								<small>You safe 36% on each patent check </small>
+							</div>
+						</section>
+
+						<section class="form__input">
+							<input type="radio" id="4_products" name="products" />
+							<div class="form__add-desccription">
+								<b>4 products for 72 usd / 18$ for each</b>
+								<small>You safe 28% on each patent check </small>
+							</div>
+						</section>
+
+						<section class="form__input">
+							<input type="radio" id="3_products" name="products" />
+							<div class="form__add-desccription">
+								<b>3 products for 60 usd / 20$ for each</b>
+								<small>You safe 20% on each patent check </small>
+							</div>
+						</section>
+
+						<section class="form__input">
+							<input type="radio" id="2_products" name="products" />
+							<div class="form__add-desccription">
+								<b>2 products for 44 usd / 22$ for each</b>
+								<small>You safe 12% on each patent check </small>
+							</div>
+						</section>
+						<section class="form__input">
+							<input type="radio" id="1_product" name="products" />
+							<div class="form__add-desccription">
+								<b>1 product for 24.99 usd</b>
+							</div>
+						</section>
+					</form>
+
+					<button class="add__formbtn formbtn" form="add__form" type="submit">Continue</button>
+				</div>
+			</article>
+		</div>
+	</body>
+</html>

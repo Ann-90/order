@@ -1,0 +1,114 @@
+/* global styles:
+-fonts: font-family, main font-color
+-main card block: gaps and sizes
+-main button (all settings)
+*/
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+/* fonts and text gaps */
+.container {
+	font-family: "Gilroy", sans-serif;
+	font-display: swap;
+	flex-grow: 1;
+}
+
+h3 {
+	font-size: 18px;
+	line-height: 24.28px;
+	font-weight: 700;
+}
+
+.formbtn {
+	text-align: center;
+	font-size: 18px;
+	line-height: 22px;
+	padding: 11px 0 10px 0;
+	margin: 20px 0 11px 0;
+}
+
+/* main card block with decore img */
+.container {
+	display: flex;
+	justify-content: flex-end;
+	background-color: #f4f5fa;
+	padding: 123px 107px;
+}
+
+.card {
+	position: relative;
+	width: 473.54px;
+	height: 550px;
+	padding: 15px 33.54px 0 0;
+}
+
+.card__decore {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+}
+
+.card__area {
+	background-color: #ffffff;
+	color: #1c154e;
+	position: relative;
+	z-index: 10;
+	border-radius: 0 50px 50px 50px;
+	box-shadow: 10px 10px 60px #e2e7ff;
+	height: 100%;
+	padding: 35px;
+}
+
+/* btn sizes, borders */
+.formbtn {
+	background-color: #23c967;
+	color: #ffffff;
+	border: none;
+	width: 100%;
+	height: 45px;
+	border-radius: 15px;
+}
+
+/* behaveour  */
+.form__input:hover,
+input:hover,
+button:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+input:focus {
+	outline: none;
+	cursor: text;
+}
+
+/* refs view */
+a {
+	text-decoration: none;
+	width: 100%;
+}
+
+@media screen and (max-width: 719px) {
+	h3,
+	.formbtn {
+		font-size: 12px;
+	}
+
+	.container {
+		padding: 50px 20px;
+	}
+}

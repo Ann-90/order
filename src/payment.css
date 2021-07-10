@@ -1,0 +1,30 @@
+.payment {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.payment__info {
+	font-size: 16px;
+	line-height: 23px;
+	margin: 12px 0;
+}
+
+.payment img {
+	height: 100%;
+}
+
+.formbtn_failed {
+	background-color: #ea717f;
+}
+
+@media screen and (max-width: 719px) {
+	.payment__info {
+		font-size: 10px;
+		line-height: 15px;
+	}
+	.payment img {
+		width: 100%;
+		height: auto;
+	}
+}
