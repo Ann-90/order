@@ -60,6 +60,9 @@ function renderProductCard(quantity, price, delay) {
 
 			products.insertAdjacentHTML("beforeend", testNode);
 		}
+
+		// FIXME: flexible element handle
+		addFocus('.form__input');
 	}
 
 	// render product btn
@@ -75,6 +78,14 @@ function removeClass(elemList, className) {
 	elemList.forEach((e) => {
 		e.classList.remove(className);
 	});
+}
+
+function addFocus(elementName) {
+	const elementCollection = document.querySelectorAll(elementName);
+
+	elementCollection.forEach((elem) => {
+		elem.addEventListener("click", (event) => event.currentTarget.querySelector("input").focus());
+	});	
 }
 
 function deleteBtn(crossCollection) {

@@ -12,6 +12,7 @@ function activateInput(event) {
 
 function changeLightningStyle(event) {
 	const inputEl = event.currentTarget.querySelector("input");
+	
 	if (inputEl.type === "radio") {
 		inputEl.checked = true;
 		removeClass(inputContainers, "form__input_active");
@@ -23,6 +24,6 @@ function handleInputCick(event) {
 	changeLightningStyle(event);
 	activateInput(event);
 }
-inputContainers.forEach((elem, index) => {
-	elem.addEventListener("click", handleInputCick);
+inputContainers.forEach((elem) => {
+	elem.addEventListener("click", handleInputCick);	
 });
