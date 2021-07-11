@@ -59,10 +59,29 @@ input::placeholder {
 	text-align: center;
 }
 
+/* scroll */
 .form__products {
 	max-height: 200px;
 	overflow-y: scroll;
 }
+
+/* TO DO: scrollbar */
+/* 
+.form__scrollbar {
+	position: relative;
+}
+
+.form__scrollbar_active::after {
+	position: absolute;
+	display: block;
+	content: " ";
+	right: 0;
+	top: 0;
+	width: 5px;
+	height: 100%;
+	background-color: #E1E3EE;
+} */
+
 
 /* loader */
 .loader {

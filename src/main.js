@@ -1,3 +1,7 @@
+// updates document, render Product elements, gets info from localStorage, handle styles
+// handle add data in ./add.js
+// handle payment in ./payment.js
+
 const products = document.querySelector(".form__products");
 const orderBtn = document.querySelector(".order__formbtn");
 
@@ -15,11 +19,21 @@ function updateState() {
 	const quantity = getProductInfo()[0];
 	const price = getProductInfo()[1];
 
+	orderBtn.addEventListener("click", addLoader);
+
+
 	renderProductCard(quantity, price);
 
 	const cross = document.querySelectorAll(".product__cross_hidden");
 
-	if (quantity > 1) removeClass(cross, "product__cross_hidden");
+	if (quantity > 1) {
+		removeClass(cross, "product__cross_hidden");
+		addClass(document.querySelectorAll(".product__cross"), "product__cross_hidden");
+		addClass(document.querySelectorAll(".form__scrollbar"), "form__scrollbar_active");
+	}
+	else {
+		removeClass(document.querySelectorAll(".form__scrollbar"), "form__scrollbar_active");
+	}
 
 	deleteBtn(cross);
 }
@@ -62,7 +76,7 @@ function renderProductCard(quantity, price, delay) {
 		}
 
 		// FIXME: flexible element handle
-		addFocus('.form__input');
+		addFocus(document.querySelectorAll('.form__input'));
 	}
 
 	// render product btn
@@ -80,9 +94,13 @@ function removeClass(elemList, className) {
 	});
 }
 
-function addFocus(elementName) {
-	const elementCollection = document.querySelectorAll(elementName);
+function addClass(elemList, className ) {
+	elemList.forEach((e) => {
+		e.classList.add(className);
+	});
+}
 
+function addFocus(elementCollection) {
 	elementCollection.forEach((elem) => {
 		elem.addEventListener("click", (event) => event.currentTarget.querySelector("input").focus());
 	});	
@@ -103,7 +121,8 @@ function deleteBtn(crossCollection) {
 
 				if (amount === 2) {
 					// hide cross if the only Product is left
-					document.querySelector(".product img").classList.add("product__cross_hidden");
+					addClass(document.querySelectorAll(".product img"), "product__cross_hidden");
+					removeClass(document.querySelectorAll(".form__scrollbar"), "form__scrollbar_active");
 				}
 			}
 
@@ -125,7 +144,5 @@ function addLoader(event) {
 		location.href = rootPath;
 	}, 2000);
 }
-
-orderBtn.addEventListener("click", addLoader);
 
 updateState();

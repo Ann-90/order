@@ -1,3 +1,5 @@
+// Product info is saved in LocalStorage object {products: {amount: amount, price: price}}
+
 const continueBtn = document.querySelector(".formbtn");
 const prices = [24.99, 44, 60, 72, 80];
 
